@@ -1,4 +1,6 @@
 <div>
   <h1 style="text-align: center;">{{this.title}}</h1>
-  <img [src]="imageUrl" alt="Briglabz logo">
+  <img [src]="imageUrl" (click)="onClick($event)" alt="Briglabz logo">
 </div>
+
+<router-outlet></router-outlet>
