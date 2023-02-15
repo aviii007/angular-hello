@@ -1,10 +1,13 @@
+<body>
 <div>
-  <h1 style="text-align: center;">  Hello {{this.userName}} from Bridgelabz</h1>
+  <h1> Hello {{this.userName}} from Bridgelabz</h1>
   <img  [src]="imageUrl" (click)="onClick($event)" alt="#Briglabz logo">
 </div>
 <br>
 <div class="textbox">
-  <input [(ngModel)]="userName"/>
+  <input (input)="onInput($event)" [(ngModel)]="userName"/>
+  <span class=error-output>{{this.nameError}}</span>
 </div>
+</body>
 
 <router-outlet></router-outlet>
